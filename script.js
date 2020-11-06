@@ -5,17 +5,14 @@ function main() {
 }
 
 function addEventListeners() {
-    let leafDiv1 = document.getElementsByClassName("div1");
-    console.log(leafDiv1);
-    leafDiv1.onclick = openLeafDiv1();
+    let leafDiv2 = document.querySelector(".div2")
+    leafDiv2.onclick = openLeafDiv2;
 
- //   let leafDiv2 = document.getElementsByClassName("div2");
- //   leafDiv2.onclick = openLeafDiv2;
+ //   let leafDiv4 = document.getElementsByClassName("div4");
+ //   leafDiv4.onclick = openLeafDiv4;
 }
 
-function openLeafDiv1() {
-    let leafDiv1 = document.getElementsByClassName("div1");
-    leafDiv1.classList.add("open");
-    console.log(leafDiv1);
-
+function openLeafDiv2(event) {
+    let leafDiv2 = event.target
+    leafDiv2.id = "open";
 }
