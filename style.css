@@ -14,14 +14,14 @@ body {
 .container {
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 0.5rem 1fr 3fr;
+    grid-template-columns: 1fr 0.5rem 1fr 5fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "header header header header "
-    "div1 branch div2 div3"
-    "div4 branch div5 div6"
-    "div7 branch div8 div9"
-    "div10 branch div11 div12";
+    "div1 branch div2 main"
+    "div4 branch div5 main"
+    "div7 branch div8 main"
+    "div10 branch div11 main";
 }
 
 ul {
@@ -50,6 +50,9 @@ li {
     width: 0.5rem;
     background-color: rgb(35, 107, 13);
     opacity: 0.8;
+}
+.main {
+    grid-area: main;
 }
 .leaf1 {
     width: 100%;
@@ -113,7 +116,8 @@ h3 {
 }
 
 .div3 {
-    border: 0.2rem solid black;
+    visibility: hidden;
+
 }
 .img {
     visibility: hidden;
@@ -122,8 +126,4 @@ h3 {
 
 .flex {
     display: flex;
-}
-
-#textdiv1 {
-    visibility: hidden;
 }

@@ -15,7 +15,7 @@ function addEventListeners() {
 function openLeafDiv2(event) {
     let leafDiv2 = event.target
     leafDiv2.style.opacity = 1;
-    leafDiv2.style.borderRadius = "7rem 0 7rem 0"
-    let textDiv1 = document.getElementById("textdiv1")
+    leafDiv2.style.borderRadius = "10rem 0 10rem 0"
+    let textDiv1 = document.querySelector(".div3")
     textDiv1.style.visibility = "visible";
 }
