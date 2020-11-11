@@ -4,39 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cv</title>
- <link rel="stylesheet" href="./style.css">
- <script src="./script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/5fe505aff9.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <div class="header flex">
-                <h3>Lisa Pääjärvi                    
-                </h3>
-                <div class= "menu">
-                    <ul class= "flex">
-                        <li>Om mig</li>
-                        <li>Utbildning</li>
-                        <li>Arbete</li>
-                    </ul>
+                <h3>Lisa Pääjärvi</h3>
+                <div class="header-icons flex align-center">
+                    <div class="header-img-div icon flex align-center center rounded">
+                        <img src="./images/lisa-solros.jpg" alt="Lisa with sunflower" class="header-img" id="about-icon" > 
+                    </div>
+                    <a href="https://github.com/lisapaajarvi" target="_blank"><i class="fab fa-github-square fa-5x icon"></i></a>
+                    <i class="fas fa-envelope-square fa-5x icon" id="contact-icon"></i>
                 </div>
-
         </div>
 
-        <div class= "div1 top leaf1">
+        <div class= "leaf-div1 top leaf-left">
             <img src="./images/leaf1.jpg" alt="" class= "img">
         </div>
         <div class= branch>            
         </div>
-        <div class= "div2 top leaf2">
+        <div class= "leaf-div2 top leaf-right">
             <img src="./images/leaf2.jpg" alt="" class= "img">
         </div>
         <div class= "main">
-            <div class= "div3 top text" id="textdiv1">
-                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            <div class= "text about" id="textdiv1">
+                <h3>Om mig</h3>
+                <br>
+                <p> 
                 </p>
             </div>
-            <div class= "div6 text">
-                <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            <div class= "text contact">
+                <h3>Kontakta mig</h3>
+                <form action="mailto:lisapaajarvi@hotmail.com" method="post" enctype="text/plain" class="flex column contact-form">
+                    <div class="flex">
+                        <div class="input">
+                            <p>Namn</p>
+                            <label for="name"></label>
+                            <input class="rounded" type="text" name="name" id="name" required>
+                        </div>
+    
+                        <div class="input">
+                            <p>E-post</p>
+                            <label for="email"></label>
+                            <input class="rounded" type="email" name="email" id="email" required>
+                        </div>
+                    </div>  
+                    <div class="input">
+                        <p>Meddelande</p>
+                        <label for="message"></label>
+                        <textarea class="message-input rounded" type="text" name="message" id="message" required></textarea>
+                    </div>
+                    
+                    <div class="input flex center align-center">
+                        <label for="submit"></label>
+                        <button class="submit-button rounded" type="submit" name="submit" id="submit">Skicka in</button>
+                    </div>
+                </form>
                 </p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis quibusdam eius, nesciunt cum ea sed placeat cupiditate! Quam maxime laboriosam neque porro, aut, nulla autem laudantium nisi eius fugiat optio?</p>
             </div>
@@ -49,22 +76,22 @@
                 </p>
             </div>
         </div>
-        <div class= "div4 leaf1">
+        <div class= "leaf-div3 leaf-left">
             <img src="./images/leaf3.jpg" alt="" class= "img">
         </div>
-        <div class= "div5 leaf2">
+        <div class= "leaf-div4 leaf-right">
             <img src="./images/leaf4.jpg" alt="" class= "img">
         </div>
-        <div class= "div7 leaf1">
+        <div class= "leaf-div5 leaf-left">
             <img src="./images/leaf5.jpg" alt="" class= "img">
         </div>
-        <div class= "div8 leaf2">
+        <div class= "leaf-div6 leaf-right">
             <img src="./images/leaf9.jpg" alt="" class= "img">
         </div>
-        <div class= "div10 leaf1">
+        <div class= "leaf-div7 leaf-left">
             <img src="./images/leaf8.jpg" alt="" class= "img">
         </div>
-        <div class= "div11 leaf2">
+        <div class= "leaf-div8 leaf-right">
             <img src="./images/leaf7.jpg" alt="" class= "img">
         </div>
     </div>
