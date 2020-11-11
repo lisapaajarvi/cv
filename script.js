@@ -2,38 +2,63 @@ window.addEventListener("load", main);
 
 function main() {
     addEventListeners();
+    startLeafAnimation();
 }
 
 function addEventListeners() {
-let contactIcon = document.getElementById("contact-icon")
-contactIcon.onclick = openContactPage;
-let aboutIcon = document.getElementById("about-icon")
-aboutIcon.onclick = openAboutPage;
+    const contactIcon = document.getElementById("contact-icon")
+    contactIcon.onclick = openContactText;
 
-    //    let leafDiv2 = document.querySelector(".div2")
-//    leafDiv2.onclick = openLeafDiv2;
+    const aboutIcon = document.getElementById("about-icon")
+    aboutIcon.onclick = openAboutText;
 
- //   let leafDiv4 = document.getElementsByClassName("div4");
- //   leafDiv4.onclick = openLeafDiv4;
+    const educationLeaf = document.querySelector(".leaf-div1")
+    educationLeaf.onclick = openEducationText;
+
+
+}
+let leafSize = 10;
+
+function startLeafAnimation () {
+    setInterval (changeLeafSize, 50);
 }
 
-function openContactPage() {
-    removeCurrentPage();
-    let contactPage = document.getElementById("contact");
-    contactPage.classList.add("show-textdiv");
+
+function changeLeafSize() {
+    //update border radius variable
+    let leftLeaves = document.querySelectorAll(".leaf-left")
+    if(leafSize >= 5) {
+    leafSize -= 0.01;
+    }
+    // change size of leaves
+    leftLeaves[0].style.borderRadius = "0 " + leafSize + "rem 0 " + leafSize +"rem";
+
 }
 
-function openAboutPage() {
-    removeCurrentPage();
-    let aboutPage = document.getElementById("about");
-    aboutPage.classList.add("show-textdiv");
+function openContactText() {
+    removeCurrentText();
+    let contactText = document.getElementById("contact");
+    contactText.classList.add("show-textdiv");
+}
+    //leftLeaves.forEach(changeLeftLeafSize)
+function openAboutText() {
+    removeCurrentText();
+    let aboutText = document.getElementById("about");
+    aboutText.classList.add("show-textdiv");
 }
 
-function removeCurrentPage() {
-    const pages = document.querySelectorAll(".textdiv");
-    for (let i = 0; i < pages.length; i++) {
-        if (pages[i].classList.contains("show-textdiv")) {
-            pages[i].classList.remove("show-textdiv");
+function openEducationText(event) {
+    removeCurrentText();
+    let educationText = document.getElementById("education");
+    educationText.classList.add("show-textdiv");
+    event.target.style.opacity = 1;
+}
+
+function removeCurrentText() {
+    const textDivs = document.querySelectorAll(".textdiv");
+    for (let i = 0; i < textDivs.length; i++) {
+        if (textDivs[i].classList.contains("show-textdiv")) {
+            textDivs[i].classList.remove("show-textdiv");
             break;
         }
     }      
