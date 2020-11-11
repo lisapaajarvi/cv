@@ -1,14 +1,9 @@
-#open {
-    opacity: 1;
-    padding: 0.5rem;
-    border-radius: 0;
-} 
-
 body {
     margin: 0;
     box-sizing: border-box;
     background-color: lightyellow;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
+    font-family: 'Cabin', sans-serif;
 }
 
 .container {
@@ -17,113 +12,158 @@ body {
     grid-template-columns: 1fr 0.5rem 1fr 5fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "header header header header "
-    "div1 branch div2 main"
+    "div1 branch div2 header"
     "div4 branch div5 main"
     "div7 branch div8 main"
     "div10 branch div11 main";
 }
 
-ul {
-    list-style-type: none;
-    justify-content: space-between;
-}
-
-li {
-    margin-right: 1rem;
-}
 .top {
     margin-top: 1rem;
 }
-.header {
-    grid-area: header;
-    background: rgb(65, 168, 110);
-    height: 5rem;
-    border-radius: 1rem;
-    border: 0.3rem solid rgb(35, 107, 13);
-    color:  rgb(21, 65, 8);
-    justify-content: space-around;
-    align-items: center;
-}
+
+/* PLANT SIDEBAR AREA */
+
 .branch {
     grid-area: branch;
     width: 0.5rem;
-    background-color: rgb(35, 107, 13);
-    opacity: 0.8;
+    background-color: darkgreen;
 }
-.main {
-    grid-area: main;
-}
-.leaf1 {
+
+.leaf-left {
     width: 100%;
     border-radius: 0 20rem 0 20rem;
-    opacity: 0.7;
-
 }
-.leaf2 {
+.leaf-right {
     width: 100%;
     border-radius: 20rem 0 20rem 0;
-    opacity: 0.7;
-
 }
-.div1 {
+
+/* HEADER AREA */
+
+.header {
+    grid-area: header;
+    height: 6rem;
+    margin: 1rem 0 1rem 2rem;
+    justify-content: space-between;
+    align-items: baseline;
+    color: darkgreen;
+}
+
+.header-img {
+    height: 3.5rem;
+    border-radius: 5rem;
+}
+.header-img-div {
+    height: 4.38rem;
+    width: 4.38rem;
+    background-color: darkgreen;
+}
+.icon {
+    margin: 0.3rem;
+}
+
+.leaf-div1 {
     background-image: url(./images/leaf1.jpg);
     background-size: cover;
     opacity: 0.8;
 }
 
-.div2 {
+.leaf-div2 {
     background-image: url(./images/leaf2.jpg);
     background-size: cover;
     opacity: 0.8;    
 }
-.div4 {
+.leaf-div3 {
     background-image: url(./images/leaf3.jpg);
     background-size: cover;
     opacity: 0.8;
 }
-.div5 {
+.leaf-div4 {
     background-image: url(./images/leaf4.jpg);
     background-size: cover;
     opacity: 0.8;
 }
-.div7 {
+.leaf-div5 {
     background-image: url(./images/leaf5.jpg);
     background-size: cover;
     opacity: 0.8;
 }
-.div8 {
+.leaf-div6 {
     background-image: url(./images/leaf6.jpg);
     background-size: cover;
     opacity: 0.8;
 }
-.div10 {
+.leaf-div7 {
     background-image: url(./images/leaf7.jpg);
     background-size: cover;
     opacity: 0.8;
 }
-.div11 {
+.leaf-div8 {
     background-image: url(./images/leaf8.jpg);
     background-size: cover;
     opacity: 0.8;
 }
-p {
-    margin-left: 2rem;
-}
 
-h3 {
-    margin-left: 3rem;
-}
-
-.div3 {
-    visibility: hidden;
-
-}
 .img {
     visibility: hidden;
     width: 100%;
 }
 
+/* MAIN AREA */
+
+.main {
+    grid-area: main;
+}
+
+.about {
+    display: none;
+}
+
+
+/* CONTACT FORM */
+
+.contact {
+    display: none;
+    max-width: 70rem;
+    padding: 0 3rem 0 3rem;
+}
+.input {
+    width: 100%;
+    padding: 1rem;
+}
+.input > * {
+    width: 100%;
+}
+.message-input {
+    height: 10rem;
+}
+
+.submit-button {
+    width: 10rem;
+    height: 2rem;
+    background-color: darkgreen;
+    color: lightyellow;
+}
+
+/* REUSABLE CLASSES */
+
 .flex {
     display: flex;
+}
+.column {
+    flex-direction: column;
+}
+.align-center {
+    align-items: center;
+}
+.center {
+    justify-content: center;
+}
+.rounded {
+    border-radius: 0.5rem;
+}
+
+.transparent {
+    opacity: 0.8;
 }
