@@ -7,6 +7,14 @@ body {
     font-family: 'Cabin', sans-serif;
 }
 
+h1 {
+    font-family: 'Mrs Saint Delafield', cursive;
+    color: black;
+}
+h2, h3, h4 {
+    font-family: 'Cinzel Decorative', cursive;
+    margin-top: 0;
+}
 .container {
     display: grid;
     height: 100%;
