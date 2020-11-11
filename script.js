@@ -3,6 +3,8 @@ window.addEventListener("load", main);
 function main() {
     addEventListeners();
     startLeafAnimation();
+    leftLeaves = document.querySelectorAll(".leaf-left")
+    rightLeaves = document.querySelectorAll(".leaf-right")
 }
 
 function addEventListeners() {
@@ -17,22 +19,36 @@ function addEventListeners() {
 
 
 }
-let leafSize = 10;
+let leafSize;
+let counter = 0;
+let leftLeaves;
+let rightLeaves;
 
 function startLeafAnimation () {
-    setInterval (changeLeafSize, 50);
+    setInterval (changeLeafSize, 100);
 }
-
 
 function changeLeafSize() {
     //update border radius variable
-    let leftLeaves = document.querySelectorAll(".leaf-left")
-    if(leafSize >= 5) {
-    leafSize -= 0.01;
-    }
-    // change size of leaves
-    leftLeaves[0].style.borderRadius = "0 " + leafSize + "rem 0 " + leafSize +"rem";
 
+    if(counter < 50) {
+        leafSize = 10 - counter/10        
+    }
+    else {
+        leafSize = 5 + ((counter - 50)/10)
+    }
+
+    // change size of leaves
+    for(let i = 0; i < leftLeaves.length; i++) {
+        leftLeaves[i].style.borderRadius = "0 " + leafSize + "rem 0 " + leafSize +"rem";
+    }
+    for(let i = 0; i < rightLeaves.length; i++) {
+        rightLeaves[i].style.borderRadius = leafSize + "rem 0 " + leafSize +"rem 0";
+    }
+    counter ++;
+    if(counter == 100) {
+        counter = 0;
+    }
 }
 
 function openContactText() {
