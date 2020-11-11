@@ -14,8 +14,8 @@
         <div class="header flex">
                 <h3>Lisa Pääjärvi</h3>
                 <div class="header-icons flex align-center">
-                    <div class="header-img-div icon flex align-center center rounded">
-                        <img src="./images/lisa-solros.jpg" alt="Lisa with sunflower" class="header-img" id="about-icon" > 
+                    <div class="header-img-div icon flex align-center center rounded" id="about-icon">
+                        <img src="./images/lisa-solros.jpg" alt="Lisa with sunflower" class="header-img"> 
                     </div>
                     <a href="https://github.com/lisapaajarvi" target="_blank"><i class="fab fa-github-square fa-5x icon"></i></a>
                     <i class="fas fa-envelope-square fa-5x icon" id="contact-icon"></i>
@@ -30,14 +30,15 @@
         <div class= "leaf-div2 top leaf-right">
             <img src="./images/leaf2.jpg" alt="" class= "img">
         </div>
-        <div class= "main">
-            <div class= "text about" id="textdiv1">
+        <main>
+            <div class= "textdiv about column" id="about">
                 <h3>Om mig</h3>
                 <br>
-                <p> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam hic cum, saepe rem odio, voluptatum explicabo 
+                    beatae ipsa ad nesciunt voluptates dicta. Commodi voluptatem ad quas similique aut. Doloribus, eius.
                 </p>
             </div>
-            <div class= "text contact">
+            <div class= "textdiv contact column" id="contact">
                 <h3>Kontakta mig</h3>
                 <form action="mailto:lisapaajarvi@hotmail.com" method="post" enctype="text/plain" class="flex column contact-form">
                     <div class="flex">
@@ -64,18 +65,19 @@
                         <button class="submit-button rounded" type="submit" name="submit" id="submit">Skicka in</button>
                     </div>
                 </form>
-                </p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis quibusdam eius, nesciunt cum ea sed placeat cupiditate! Quam maxime laboriosam neque porro, aut, nulla autem laudantium nisi eius fugiat optio?</p>
             </div>
-            <div class= "div9 text">
+            <div class= "textdiv education column" id="education">
+                <h3>Utbildning</h3>
                 <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 </p>
             </div>
-            <div class= "div12 text">
+            <div class= "textdiv work column" id="work">
+                <h3>Arbetslivserfarenhet</h3>
                 <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 </p>
             </div>
-        </div>
+
+        </main>
         <div class= "leaf-div3 leaf-left">
             <img src="./images/leaf3.jpg" alt="" class= "img">
         </div>
@@ -88,10 +90,10 @@
         <div class= "leaf-div6 leaf-right">
             <img src="./images/leaf9.jpg" alt="" class= "img">
         </div>
-        <div class= "leaf-div7 leaf-left">
+        <div class= "leaf-div7 leaf-left bottom">
             <img src="./images/leaf8.jpg" alt="" class= "img">
         </div>
-        <div class= "leaf-div8 leaf-right">
+        <div class= "leaf-div8 leaf-right bottom">
             <img src="./images/leaf7.jpg" alt="" class= "img">
         </div>
     </div>
