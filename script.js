@@ -1,5 +1,10 @@
 window.addEventListener("load", main);
 
+let leafSize;
+let counter = 0;
+let leftLeaves;
+let rightLeaves;
+
 function main() {
     addEventListeners();
     startLeafAnimation();
@@ -17,20 +22,24 @@ function addEventListeners() {
     const educationLeaf = document.querySelector(".leaf-div1")
     educationLeaf.onclick = openEducationText;
 
+    const workLeaf = document.querySelector(".leaf-div2")
+    workLeaf.onclick = openWorkText;
+
+    const musicLeaf = document.querySelector(".leaf-div3")
+    musicLeaf.onclick = openMusicText;
+
+    const codingLeaf = document.querySelector(".leaf-div4")
+    codingLeaf.onclick = openCodingText;
 
 }
-let leafSize;
-let counter = 0;
-let leftLeaves;
-let rightLeaves;
 
 function startLeafAnimation () {
     setInterval (changeLeafSize, 100);
 }
 
 function changeLeafSize() {
-    //update border radius variable
 
+    //update border radius variable
     if(counter < 50) {
         leafSize = 10 - counter/10        
     }
@@ -56,18 +65,35 @@ function openContactText() {
     let contactText = document.getElementById("contact");
     contactText.classList.add("show-textdiv");
 }
-    //leftLeaves.forEach(changeLeftLeafSize)
+
 function openAboutText() {
     removeCurrentText();
     let aboutText = document.getElementById("about");
     aboutText.classList.add("show-textdiv");
 }
 
-function openEducationText(event) {
+function openEducationText() {
     removeCurrentText();
     let educationText = document.getElementById("education");
     educationText.classList.add("show-textdiv");
-    event.target.style.opacity = 1;
+}
+
+function openWorkText() {
+    removeCurrentText();
+    let workText = document.getElementById("work");
+    workText.classList.add("show-textdiv");
+}
+
+function openMusicText() {
+    removeCurrentText();
+    let musicText = document.getElementById("music");
+    musicText.classList.add("show-textdiv");
+}
+
+function openCodingText() {
+    removeCurrentText();
+    let codingText = document.getElementById("coding");
+    codingText.classList.add("show-textdiv");
 }
 
 function removeCurrentText() {
@@ -79,12 +105,3 @@ function removeCurrentText() {
         }
     }      
 }
-
-/*
-function openLeafDiv2(event) {
-    let leafDiv2 = event.target
-    leafDiv2.style.opacity = 1;
-    leafDiv2.style.borderRadius = "8rem 0 8rem 0"
-    let textDiv1 = document.querySelector(".div3")
-    textDiv1.style.visibility = "visible";
-} */
