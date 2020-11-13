@@ -1,11 +1,12 @@
 .header {
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: space-around;
 }
 .container {
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 0.08fr 1fr 6fr;
+    grid-template-columns: 1fr 0.08fr 1fr 3fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "leaf-div1 branch leaf-div2 header"
@@ -20,7 +21,7 @@
 }
 
 .extra-leaf {
-    display: unset;
+    display: block;
 }
 
 h1 {
