@@ -32,34 +32,48 @@ ul {
     "leaf-div1 branch leaf-div2 header"
     "leaf-div3 branch leaf-div4 main"
     "leaf-div5 branch leaf-div6 main"
-    "leaf-div7 branch leaf-div8 main";
+    "leaf-div7 branch leaf-div8 main"
+    "leaf-div9 branch leaf-div10 main"
+    "leaf-div11 branch leaf-div12 main"
+    "leaf-div13 branch leaf-div14 main"
+    "leaf-div15 branch leaf-div16 main"
+    "leaf-div17 branch leaf-div18 main";
 }
-
 .top {
     margin-top: 1rem;
 }
 .bottom {
     margin-bottom: 1rem;
 }
-
-.show-textdiv {
-    display: flex;
+/* LEAVES SIDEBAR AREA */
+.mobile-header-div {
+    display: none;
 }
-
-/* PLANT SIDEBAR AREA */
-
 .branch {
     grid-area: branch;
     background-color: darkgreen;
     height: 100%;
 }
 .leaf-left {
-    width: 100%;
     border-radius: 0 20rem 0 20rem;
 }
 .leaf-right {
-    width: 100%;
     border-radius: 20rem 0 20rem 0;
+}
+.leaf {
+    width: 100%;
+    cursor: pointer;
+    height: width;
+    position: relative;
+}
+.leaf-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+    font-family: 'Cinzel Decorative', cursive;
+
 }
 .leaf-div1 {
     background-image: url(./images/leaf1.jpg);
@@ -85,9 +99,36 @@ ul {
 .leaf-div8 {
     background-image: url(./images/leaf8.jpg);
 }
+.leaf-div9 {
+    background-image: url(./images/leaf1.jpg);
+}
+.leaf-div10{
+    background-image: url(./images/leaf2.jpg);   
+}
+.leaf-div11 {
+    background-image: url(./images/leaf3.jpg);
+}
+.leaf-div12 {
+    background-image: url(./images/leaf4.jpg);
+}
+.leaf-div13 {
+    background-image: url(./images/leaf5.jpg);
+}
+.leaf-div14 {
+    background-image: url(./images/leaf6.jpg);
+}
+.leaf-div15 {
+    background-image: url(./images/leaf7.jpg);
+}
+.leaf-div16 {
+    background-image: url(./images/leaf8.jpg);
+}
 .img {
     visibility: hidden;
     width: 100%;
+}
+.mobile-leaf {
+    display: none;
 }
 /* HEADER AREA */
 
@@ -107,11 +148,17 @@ ul {
     height: 4.38rem;
     width: 4.38rem;
     background-color: darkgreen;
+    cursor: pointer;
 }
 .icon {
     margin: 0.3rem;
+    cursor: pointer;
 }
 
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+}
 
 
 /* MAIN AREA */
@@ -126,8 +173,16 @@ main > div {
 
 .textdiv {
     margin: 0 2rem 2rem 2rem;
-    height: 100vh;
+    max-width: 50rem;
 }
+
+.spotify {
+    margin-top: 1rem;
+}
+.show-textdiv {
+    display: flex;
+}
+
 
 /* CONTACT FORM */
 
