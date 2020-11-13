@@ -23,7 +23,9 @@ function main() {
 /** function that adds all the event listeners to the page */
 function addEventListeners() {
     const contactIcon = document.getElementById("contact-icon")
+    const contactLeaf = document.querySelector(".leaf-div7")
     contactIcon.onclick = openContactText;
+    contactLeaf.onclick = openContactText;
 
     const aboutIcon = document.getElementById("about-icon")
     const aboutMobileIcon = document.getElementById("about-mobile-icon")
