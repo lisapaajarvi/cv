@@ -50,12 +50,13 @@ h1 {
     display: grid;
     background-color: lightyellow;
     padding-left: 1rem;
+    padding-right: 1rem;
     z-index: 100;
     position: fixed;
     top: 0;
-    right: -30rem;
+    right: -40rem;
     height: 100%;
-    width: 20rem;
+    width: 90%;
     grid-template-columns: 1fr 0.1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 

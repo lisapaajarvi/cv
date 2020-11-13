@@ -50,6 +50,10 @@ function addEventListeners() {
     japaneseLeaf[0].onclick = openJapaneseText;
     japaneseLeaf[1].onclick = openJapaneseText;
 
+    const farmingLeaf = document.querySelectorAll(".leaf-div6")
+    farmingLeaf[0].onclick = openFarmingText;
+    farmingLeaf[1].onclick = openFarmingText;
+
     const mobileMenuIcon = document.querySelector(".mobile-menu-icon")
     mobileMenuIcon.onclick = openMobileMenu;
 }
@@ -89,7 +93,7 @@ function openMobileMenu() {
     let mobileMenu = document.getElementById("mobile-menu")
     mobileMenu.style.right = 0;
     mobileMenu.onclick = function(){
-        mobileMenu.style.right = "-30rem";
+        mobileMenu.style.right = "-40rem";
     };
 }
 
@@ -140,6 +144,13 @@ function openJapaneseText() {
     removeCurrentText();
     let japaneseText = document.getElementById("japanese");
     japaneseText.classList.add("show-textdiv");
+}
+
+/** displays the textdiv with farming info */
+function openFarmingText() {
+    removeCurrentText();
+    let farmingText = document.getElementById("farming");
+    farmingText.classList.add("show-textdiv");
 }
 
 /** hides the textdiv that is currently displayed */
