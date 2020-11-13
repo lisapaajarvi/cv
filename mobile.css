@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "mobile-header-div header"
+    "main main";
+}
+.header {
+    flex-direction: row;
+}
+.extra-leaf {
+    display: none;
+}
+.spotify {
+    display: none;
+}
+h1 {
+    margin: 0;
+}
+.textdiv {
+    margin: 0.5rem;
+}
+.leaf {
+    display: none;
+}
+.branch {
+    display: none;
+}
+.mobile-header-div {
+    display: flex;
+    margin-top: 1rem;
+}
+.mobile-menu-icon {
+    display: flex;
+}
+.header-icons {
+    display: none;
+}
