@@ -1,10 +1,18 @@
 window.addEventListener("load", main);
 
+/** a variable that stores the value for the border radius of leaf shaped divs*/
 let leafSize;
+
+/** a counter that is used to update the leafSize variable */
 let counter = 0;
+
+/** A variable that stores an array of all the leaves pointing to the left*/
 let leftLeaves;
+
+/** A variable that stores an array of all the leaves pointing to the right */
 let rightLeaves;
 
+/** starts the main functions of the page */
 function main() {
     addEventListeners();
     startLeafAnimation();
@@ -12,6 +20,7 @@ function main() {
     rightLeaves = document.querySelectorAll(".leaf-right")
 }
 
+/** function that adds all the event listeners to the page */
 function addEventListeners() {
     const contactIcon = document.getElementById("contact-icon")
     contactIcon.onclick = openContactText;
@@ -24,7 +33,6 @@ function addEventListeners() {
     const educationLeaf = document.querySelectorAll(".leaf-div1")
     educationLeaf[0].onclick = openEducationText;
     educationLeaf[1].onclick = openEducationText;
-
 
     const workLeaf = document.querySelectorAll(".leaf-div2")
     workLeaf[0].onclick = openWorkText;
@@ -46,13 +54,15 @@ function addEventListeners() {
     mobileMenuIcon.onclick = openMobileMenu;
 }
 
+/** starts the animation of the leaves with an interval */
 function startLeafAnimation () {
     setInterval (changeLeafSize, 100);
 }
 
+/** changes the border radius of the leaves to animate them */
 function changeLeafSize() {
 
-    //update border radius variable
+    // update leafSize variable
     if(counter < 50) {
         leafSize = 10 - counter/10        
     }
@@ -67,13 +77,14 @@ function changeLeafSize() {
     for(let i = 0; i < rightLeaves.length; i++) {
         rightLeaves[i].style.borderRadius = leafSize + "rem 0 " + leafSize +"rem 0";
     }
-    //update counter
+    // update counter
     counter ++;
     if(counter == 100) {
         counter = 0;
     }
 }
 
+/** opens the mobile hamburger menu and then closes it again on click */
 function openMobileMenu() {
     let mobileMenu = document.getElementById("mobile-menu")
     mobileMenu.style.right = 0;
@@ -81,47 +92,57 @@ function openMobileMenu() {
         mobileMenu.style.right = "-30rem";
     };
 }
+
+/** displays the textdiv with contact form */
 function openContactText() {
     removeCurrentText();
     let contactText = document.getElementById("contact");
     contactText.classList.add("show-textdiv");
 }
 
+/** displays the textdiv with info about Lisa */
 function openAboutText() {
     removeCurrentText();
     let aboutText = document.getElementById("about");
     aboutText.classList.add("show-textdiv");
 }
 
+/** displays the textdiv with education info */
 function openEducationText() {
     removeCurrentText();
     let educationText = document.getElementById("education");
     educationText.classList.add("show-textdiv");
 }
 
+/** displays the textdiv with work experience info */
 function openWorkText() {
     removeCurrentText();
     let workText = document.getElementById("work");
     workText.classList.add("show-textdiv");
 }
 
+/** displays the textdiv with music info */
 function openMusicText() {
     removeCurrentText();
     let musicText = document.getElementById("music");
     musicText.classList.add("show-textdiv");
 }
 
+/** displays the textdiv with coding info */
 function openCodingText() {
     removeCurrentText();
     let codingText = document.getElementById("coding");
     codingText.classList.add("show-textdiv");
 }
 
+/** displays the textdiv with japanese info */
 function openJapaneseText() {
     removeCurrentText();
     let japaneseText = document.getElementById("japanese");
     japaneseText.classList.add("show-textdiv");
 }
+
+/** hides the textdiv that is currently displayed */
 function removeCurrentText() {
     const textDivs = document.querySelectorAll(".textdiv");
     for (let i = 0; i < textDivs.length; i++) {
