@@ -10,6 +10,7 @@ body {
 h1 {
     font-family: 'Mrs Saint Delafield', cursive;
     color: black;
+    margin: 0;
 }
 h2, h3, h4 {
     font-family: 'Cinzel Decorative', cursive;
@@ -46,9 +47,7 @@ ul {
     margin-bottom: 1rem;
 }
 /* LEAVES SIDEBAR AREA */
-.mobile-header-div {
-    display: none;
-}
+
 .branch {
     grid-area: branch;
     background-color: darkgreen;
@@ -62,9 +61,11 @@ ul {
 }
 .leaf {
     width: 100%;
-    cursor: pointer;
     height: width;
     position: relative;
+}
+.pointer {
+    cursor: pointer;
 }
 .leaf-text {
     position: absolute;
@@ -134,10 +135,11 @@ ul {
 
 .header {
     grid-area: header;
-    margin: 1rem 0 0 2rem;
+    margin: 0 0 0 2rem;
     justify-content: space-between;
     align-items: baseline;
     color: darkgreen;
+    padding-bottom: 1rem;
 }
 
 .header-img {
@@ -157,9 +159,15 @@ ul {
 
 .mobile-menu-icon {
     display: none;
-    cursor: pointer;
 }
 
+.mobile-header-div {
+    display: none;
+}
+
+.mobile-menu-container {
+    display: none;
+}
 
 /* MAIN AREA */
 
@@ -188,7 +196,7 @@ main > div {
 
 .contact {
 
-    max-width: 70rem;
+    max-width: 40rem;
     padding: 0 3rem 0 0;
 }
 .input {

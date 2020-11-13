@@ -6,25 +6,60 @@
     <title>cv</title>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Cinzel+Decorative:wght@400;700;900&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./tablet.css" media="(max-width: 1024px)">
-    <link rel="stylesheet" href="./mobile.css" media="(max-width: 480px)">
+    <link rel="stylesheet" href="./tablet-large.css" media="(max-width: 1024px)">
+    <link rel="stylesheet" href="./tablet-small.css" media="(max-width: 800px)">    
+    <link rel="stylesheet" href="./mobile.css" media="(max-width: 600px)">
     <script src="./script.js"></script>
     <script src="https://kit.fontawesome.com/5fe505aff9.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
-    <div class="container">
-        <div class="mobile-header-div">
-            <div class="header-img-div icon flex align-center center rounded" id="about-icon">
-                <img src="./images/lisa-solros.jpg" alt="Lisa with sunflower" class="header-img"> 
-            </div>
+    <div class = "mobile-menu-container" id="mobile-menu">
+        <div class= "leaf-div1 top leaf-left leaf cover transparent pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
+            <p class="leaf-text">utbildning</p>
         </div>
+        <div class= branch>            
+        </div>
+        <div class= "leaf-div2 top leaf-right leaf cover transparent pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
+            <p class="leaf-text">erfarenhet</p>
+        </div>
+        <div class= "leaf-div3 leaf-left leaf cover transparent pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
+            <p class="leaf-text">musik</p>
+        </div>
+        <div class= "leaf-div4 leaf-right leaf cover transparent pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
+            <p class="leaf-text">webb</p>
+        </div>
+        <div class= "leaf-div5 leaf-left leaf cover transparent pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
+            <p class="leaf-text">japanska</p>
+        </div>
+        <div class= "leaf-div6 leaf-right leaf cover transparent pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
+            <p class="leaf-text">odling</p>
+        </div>
+        <div class= "leaf-div7 leaf-left leaf cover transparent">
+            <img src="./images/white-square.jpg" alt="" class= "img">
+        </div>
+        <div class= "leaf-div8 leaf-right leaf cover transparent">
+            <img src="./images/white-square.jpg" alt="" class= "img">
+        </div>
+    </div>
+    <div class="container">
         <div class="header flex align-center">
+                <div class="mobile-header-div icon align-center center rounded" id="about-mobile-icon">
+                    <img src="./images/lisa-solros.jpg" alt="Lisa with sunflower" class="header-img"> 
+                </div>
                 <div class=title>
                     <h1>Lisa Pääjärvi</h1>
                 </div>
-                <i class="fas fa-bars fa-4x mobile-menu-icon"></i>
+                <div class="mobile-menu-icon">
+                    <i class="fas fa-bars fa-4x mobile-menu-icon"></i>
+                </div>
                 <div class="header-icons flex align-center">
                     <div class="header-img-div icon flex align-center center rounded" id="about-icon">
                         <img src="./images/lisa-solros.jpg" alt="Lisa with sunflower" class="header-img"> 
@@ -48,7 +83,7 @@
                 <p>Född och uppvuxen i byn Siekasjärvi med 20 invånare, har bott i mångmiljonstaden Tokyo, men numera hemmastadd i Göteborg. 
                 </p>
 
-                <p>Klicka på bladen till vänster för att läsa mer!</p>
+                <p class="hide-on-mobile">Klicka på bladen till vänster för att läsa mer!</p>
             </div>
             <div class= "textdiv contact column" id="contact">
                 <h3>Kontakta mig</h3>
@@ -201,64 +236,64 @@
 
 <!--SIDEBAR/MENU AREA WITH LEAF SHAPED DIVS-->    
 
-        <div class= "leaf-div1 top leaf-left leaf cover transparent">
-            <img src="./images/leaf1.jpg" alt="" class= "img">
+        <div class= "leaf-div1 top leaf-left leaf cover transparent hide-on-mobile pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p class="leaf-text">utbildning</p>
         </div>
-        <div class= branch>            
+        <div class= "branch hide-on-mobile">            
         </div>
-        <div class= "leaf-div2 top leaf-right leaf cover transparent">
-            <img src="./images/leaf2.jpg" alt="" class= "img">
+        <div class= "leaf-div2 top leaf-right leaf cover transparent hide-on-mobile pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p class="leaf-text">erfarenhet</p>
         </div>
-        <div class= "leaf-div3 leaf-left leaf cover transparent">
-            <img src="./images/leaf3.jpg" alt="" class= "img">
+        <div class= "leaf-div3 leaf-left leaf cover transparent hide-on-mobile pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p class="leaf-text">musik</p>
         </div>
-        <div class= "leaf-div4 leaf-right leaf cover transparent">
-            <img src="./images/leaf4.jpg" alt="" class= "img">
+        <div class= "leaf-div4 leaf-right leaf cover transparent hide-on-mobile pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p class="leaf-text">webb</p>
         </div>
-        <div class= "leaf-div5 leaf-left leaf cover transparent">
-            <img src="./images/leaf5.jpg" alt="" class= "img">
+        <div class= "leaf-div5 leaf-left leaf cover transparent hide-on-mobile pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p class="leaf-text">japanska</p>
         </div>
-        <div class= "leaf-div6 leaf-right leaf cover transparent">
-            <img src="./images/leaf9.jpg" alt="" class= "img">
+        <div class= "leaf-div6 leaf-right leaf cover transparent hide-on-mobile pointer">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p class="leaf-text">odling</p>
         </div>
-        <div class= "leaf-div7 leaf-left leaf cover transparent">
-            <img src="./images/leaf8.jpg" alt="" class= "img">
+        <div class= "leaf-div7 leaf-left leaf cover transparent hide-on-mobile">
+            <img src="./images/white-square.jpg" alt="" class= "img">
         </div>
-        <div class= "leaf-div8 leaf-right leaf cover transparent">
-            <img src="./images/leaf7.jpg" alt="" class= "img">
+        <div class= "leaf-div8 leaf-right leaf cover transparent hide-on-mobile">
+            <img src="./images/white-square.jpg" alt="" class= "img">
         </div>
         <div class= "leaf-div9 leaf-left leaf cover transparent extra-leaf">
-            <img src="./images/leaf1.jpg" alt="" class= "img">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p></p>
         </div>
         <div class= "leaf-div10 leaf-right leaf cover transparent extra-leaf">
-            <img src="./images/leaf2.jpg" alt="" class= "img">
+            <img src="./images/white-square.jpg" alt="" class= "img">
         </div>
         <div class= "leaf-div11 leaf-left leaf cover transparent extra-leaf">
-            <img src="./images/leaf3.jpg" alt="" class= "img">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p></p>
         </div>
         <div class= "leaf-div12 leaf-right leaf cover transparent extra-leaf">
-            <img src="./images/leaf4.jpg" alt="" class= "img">
+            <img src="./images/white-square.jpg" alt="" class= "img">
         </div>
         <div class= "leaf-div13 leaf-left leaf cover transparent extra-leaf">
-            <img src="./images/leaf5.jpg" alt="" class= "img">
+            <img src="./images/white-square.jpg" alt="" class= "img">
             <p></p>
         </div>
         <div class= "leaf-div14 leaf-right leaf cover transparent extra-leaf">
-            <img src="./images/leaf9.jpg" alt="" class= "img">
+            <img src="./images/white-square.jpg" alt="" class= "img">
         </div>
         <div class= "leaf-div15 leaf-left leaf bottom cover transparent extra-leaf">
-            <img src="./images/leaf8.jpg" alt="" class= "img">
+            <img src="./images/white-square.jpg" alt="" class= "img">
         </div>
         <div class= "leaf-div16 leaf-right leaf bottom cover transparent extra-leaf">
-            <img src="./images/leaf7.jpg" alt="" class= "img">
+            <img src="./images/white-square.jpg" alt="" class= "img">
         </div>
     </div>
     
