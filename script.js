@@ -17,22 +17,33 @@ function addEventListeners() {
     contactIcon.onclick = openContactText;
 
     const aboutIcon = document.getElementById("about-icon")
+    const aboutMobileIcon = document.getElementById("about-mobile-icon")
     aboutIcon.onclick = openAboutText;
+    aboutMobileIcon.onclick = openAboutText;
 
-    const educationLeaf = document.querySelector(".leaf-div1")
-    educationLeaf.onclick = openEducationText;
+    const educationLeaf = document.querySelectorAll(".leaf-div1")
+    educationLeaf[0].onclick = openEducationText;
+    educationLeaf[1].onclick = openEducationText;
 
-    const workLeaf = document.querySelector(".leaf-div2")
-    workLeaf.onclick = openWorkText;
 
-    const musicLeaf = document.querySelector(".leaf-div3")
-    musicLeaf.onclick = openMusicText;
+    const workLeaf = document.querySelectorAll(".leaf-div2")
+    workLeaf[0].onclick = openWorkText;
+    workLeaf[1].onclick = openWorkText;
 
-    const codingLeaf = document.querySelector(".leaf-div4")
-    codingLeaf.onclick = openCodingText;
+    const musicLeaf = document.querySelectorAll(".leaf-div3")
+    musicLeaf[0].onclick = openMusicText;
+    musicLeaf[1].onclick = openMusicText;
 
-    const japaneseLeaf = document.querySelector(".leaf-div5")
-    japaneseLeaf.onclick = openJapaneseText;
+    const codingLeaf = document.querySelectorAll(".leaf-div4")
+    codingLeaf[0].onclick = openCodingText;
+    codingLeaf[1].onclick = openCodingText;
+
+    const japaneseLeaf = document.querySelectorAll(".leaf-div5")
+    japaneseLeaf[0].onclick = openJapaneseText;
+    japaneseLeaf[1].onclick = openJapaneseText;
+
+    const mobileMenuIcon = document.querySelector(".mobile-menu-icon")
+    mobileMenuIcon.onclick = openMobileMenu;
 }
 
 function startLeafAnimation () {
@@ -63,6 +74,13 @@ function changeLeafSize() {
     }
 }
 
+function openMobileMenu() {
+    let mobileMenu = document.getElementById("mobile-menu")
+    mobileMenu.style.right = 0;
+    mobileMenu.onclick = function(){
+        mobileMenu.style.right = "-30rem";
+    };
+}
 function openContactText() {
     removeCurrentText();
     let contactText = document.getElementById("contact");
