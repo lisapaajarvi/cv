@@ -6,6 +6,8 @@
     <title>cv</title>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@0;1&family=Cinzel+Decorative:wght@400;700;900&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./tablet.css" media="(max-width: 1024px)">
+    <link rel="stylesheet" href="./mobile.css" media="(max-width: 480px)">
     <script src="./script.js"></script>
     <script src="https://kit.fontawesome.com/5fe505aff9.js" crossorigin="anonymous"></script>
 </head>
@@ -13,8 +15,16 @@
 
 <body>
     <div class="container">
-        <div class="header flex">
-                <h1>Lisa Pääjärvi</h1>
+        <div class="mobile-header-div">
+            <div class="header-img-div icon flex align-center center rounded" id="about-icon">
+                <img src="./images/lisa-solros.jpg" alt="Lisa with sunflower" class="header-img"> 
+            </div>
+        </div>
+        <div class="header flex align-center">
+                <div class=title>
+                    <h1>Lisa Pääjärvi</h1>
+                </div>
+                <i class="fas fa-bars fa-4x mobile-menu-icon"></i>
                 <div class="header-icons flex align-center">
                     <div class="header-img-div icon flex align-center center rounded" id="about-icon">
                         <img src="./images/lisa-solros.jpg" alt="Lisa with sunflower" class="header-img"> 
@@ -150,15 +160,16 @@
             </div>
             <div class="textdiv music column" id="music">
                 <h3>Vokaltrion titania</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/CGbsL-JFwlc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Våren 2018 var jag med och startade titania, en semi-professionell vokaltrio 
+                <p>Våren 2018 var jag med och startade <a href="http://www.titania.nu" target=_blank>titania</a>, en semi-professionell vokaltrio 
                     som både anordnar egna konserter och blir anlitade till olika typer av evenemang.</p>
                 <p>I år har vi till exempel sjungit på Jonsereds trädgårdar, medverkat i ett nyskrivet Requiem på Atalante och spelat in en julskiva 
                     som precis har släppts på Spotify.</p>
+                <div class="flex center spotify">
                     <iframe src="https://open.spotify.com/embed/album/37MtjA87J0FXodNgbzzeWG" 
                     width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    
                 </div>
+                    
+            </div>
             <div class="textdiv coding column" id="coding">
                 <h3>Webbutveckling</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur hic possimus, 
@@ -188,32 +199,65 @@
 
         </main>
 
-<!--SIDE MENU AREA WITH LEAF SHAPED DIVS-->    
+<!--SIDEBAR/MENU AREA WITH LEAF SHAPED DIVS-->    
 
-        <div class= "leaf-div1 top leaf-left cover transparent">
+        <div class= "leaf-div1 top leaf-left leaf cover transparent">
             <img src="./images/leaf1.jpg" alt="" class= "img">
+            <p class="leaf-text">utbildning</p>
         </div>
         <div class= branch>            
         </div>
-        <div class= "leaf-div2 top leaf-right cover transparent">
+        <div class= "leaf-div2 top leaf-right leaf cover transparent">
             <img src="./images/leaf2.jpg" alt="" class= "img">
+            <p class="leaf-text">erfarenhet</p>
         </div>
-        <div class= "leaf-div3 leaf-left cover transparent">
+        <div class= "leaf-div3 leaf-left leaf cover transparent">
             <img src="./images/leaf3.jpg" alt="" class= "img">
+            <p class="leaf-text">musik</p>
         </div>
-        <div class= "leaf-div4 leaf-right cover transparent">
+        <div class= "leaf-div4 leaf-right leaf cover transparent">
             <img src="./images/leaf4.jpg" alt="" class= "img">
+            <p class="leaf-text">webb</p>
         </div>
-        <div class= "leaf-div5 leaf-left cover transparent">
+        <div class= "leaf-div5 leaf-left leaf cover transparent">
             <img src="./images/leaf5.jpg" alt="" class= "img">
+            <p class="leaf-text">japanska</p>
         </div>
-        <div class= "leaf-div6 leaf-right cover transparent">
+        <div class= "leaf-div6 leaf-right leaf cover transparent">
             <img src="./images/leaf9.jpg" alt="" class= "img">
+            <p class="leaf-text">odling</p>
         </div>
-        <div class= "leaf-div7 leaf-left bottom cover transparent">
+        <div class= "leaf-div7 leaf-left leaf cover transparent">
             <img src="./images/leaf8.jpg" alt="" class= "img">
         </div>
-        <div class= "leaf-div8 leaf-right bottom cover transparent">
+        <div class= "leaf-div8 leaf-right leaf cover transparent">
+            <img src="./images/leaf7.jpg" alt="" class= "img">
+        </div>
+        <div class= "leaf-div9 leaf-left leaf cover transparent extra-leaf">
+            <img src="./images/leaf1.jpg" alt="" class= "img">
+            <p></p>
+        </div>
+        <div class= "leaf-div10 leaf-right leaf cover transparent extra-leaf">
+            <img src="./images/leaf2.jpg" alt="" class= "img">
+        </div>
+        <div class= "leaf-div11 leaf-left leaf cover transparent extra-leaf">
+            <img src="./images/leaf3.jpg" alt="" class= "img">
+            <p></p>
+        </div>
+        <div class= "leaf-div12 leaf-right leaf cover transparent extra-leaf">
+            <img src="./images/leaf4.jpg" alt="" class= "img">
+        </div>
+        <div class= "leaf-div13 leaf-left leaf cover transparent extra-leaf">
+            <img src="./images/leaf5.jpg" alt="" class= "img">
+            <p></p>
+        </div>
+        <div class= "leaf-div14 leaf-right leaf cover transparent extra-leaf">
+            <img src="./images/leaf9.jpg" alt="" class= "img">
+        </div>
+        <div class= "leaf-div15 leaf-left leaf bottom cover transparent extra-leaf">
+            <img src="./images/leaf8.jpg" alt="" class= "img">
+        </div>
+        <div class= "leaf-div16 leaf-right leaf bottom cover transparent extra-leaf">
             <img src="./images/leaf7.jpg" alt="" class= "img">
         </div>
     </div>
