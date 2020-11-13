@@ -31,6 +31,8 @@ function addEventListeners() {
     const codingLeaf = document.querySelector(".leaf-div4")
     codingLeaf.onclick = openCodingText;
 
+    const japaneseLeaf = document.querySelector(".leaf-div5")
+    japaneseLeaf.onclick = openJapaneseText;
 }
 
 function startLeafAnimation () {
@@ -54,6 +56,7 @@ function changeLeafSize() {
     for(let i = 0; i < rightLeaves.length; i++) {
         rightLeaves[i].style.borderRadius = leafSize + "rem 0 " + leafSize +"rem 0";
     }
+    //update counter
     counter ++;
     if(counter == 100) {
         counter = 0;
@@ -96,6 +99,11 @@ function openCodingText() {
     codingText.classList.add("show-textdiv");
 }
 
+function openJapaneseText() {
+    removeCurrentText();
+    let japaneseText = document.getElementById("japanese");
+    japaneseText.classList.add("show-textdiv");
+}
 function removeCurrentText() {
     const textDivs = document.querySelectorAll(".textdiv");
     for (let i = 0; i < textDivs.length; i++) {
