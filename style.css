@@ -191,6 +191,12 @@ main > div {
     display: flex;
 }
 
+.hiromi-img {
+    margin-top: 1rem;
+    width: 50%;
+    max-width: 20rem; 
+}
+
 
 /* CONTACT FORM */
 
