@@ -15,7 +15,7 @@ let rightLeaves;
 /** starts the main functions of the page */
 function main() {
     addEventListeners();
-    startLeafAnimation();
+    LeafAnimation();
     leftLeaves = document.querySelectorAll(".leaf-left")
     rightLeaves = document.querySelectorAll(".leaf-right")
 }
@@ -61,7 +61,7 @@ function addEventListeners() {
 }
 
 /** starts the animation of the leaves with an interval */
-function startLeafAnimation () {
+function LeafAnimation () {
     setInterval (changeLeafSize, 100);
 }
 
