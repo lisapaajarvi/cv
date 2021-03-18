@@ -21,7 +21,7 @@ p {
     margin: 0.5rem;
 }
 
-ul {
+ol {
     list-style-type: none;
 }
 .container {
@@ -185,8 +185,8 @@ main > div {
     max-width: 50rem;
 }
 
-.spotify {
-    margin-top: 1rem;
+.youtube {
+    margin-top: 1.5rem;
 }
 .show-textdiv {
     display: flex;
@@ -196,6 +196,19 @@ main > div {
     margin-top: 1rem;
     width: 50%;
     max-width: 20rem; 
+    box-shadow: rgba(0, 0, 0, 0.3) 1rem 1rem 2rem;
+}
+
+.veg-img {
+    margin: 1rem;
+    width: 50%;
+    max-width: 30rem; 
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 1rem 1rem 2rem;
+}
+
+.coding-list {
+    list-style-type: square;
 }
 
 
